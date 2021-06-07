@@ -1,0 +1,49 @@
+{% extends "frontendTemplates/layouts/frame-player.html" %}
+
+{% block title %} TNMusic | Webplayer {% endblock %}
+
+{% block main-content %}
+
+
+<section id="section-main">
+    <div class="filterNav">
+        <a href="{% url 'player-index-id' sid=song.id %}" class="filterNav-link">Đặc sắc</a>
+        <a href="{% url 'player-category' sid=song.id %}" class="filterNav-link active">Phân loại</a>
+        <a href="{% url 'player-genre' sid=song.id %}" class="filterNav-link">Thể loại</a>
+        <a href="{% url 'player-mood' sid=song.id %}" class="filterNav-link">Tâm trạng</a>
+        <a href="{% url 'player-artist' sid=song.id %}" class="filterNav-link">Nghệ sĩ</a>
+        <a href="{% url 'player-favorites' sid=song.id %}" class="filterNav-link">Ưa thích</a>
+    </div>
+    <div class="music">
+        <div class="music-page">
+            <div class="music-head">
+                <div class="music-head-item">
+                    <h1>Danh sách ca sĩ!</h1>
+                </div>
+            </div>
+            {% load static %}
+            <div class="music-row">
+                {% if not artist %}
+                    <h6>Không có ca sĩ nào trong cơ sở dữ liệu!</h6>
+                {% else %}
+            	{% for row in artist %}
+                <a href='{% url "player-artist-details" sid=song.id aid=row.id %}' class="music-col">
+                    <div class="music-img">
+                        {% static "./images/home.jpg" as baseURL %}
+                        <img src='{{ baseURL|cut:".jpg" }}{{ forloop.counter }}.jpg' alt="night" class="img-fluid">
+                        <button class="music-playBtn">
+                            <img src='{% static "./images/play.svg" %}' alt="play">
+                        </button>
+                    </div>
+                    <h3>{{ row.artist_name }}</h3>
+                </a>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% endblock %}

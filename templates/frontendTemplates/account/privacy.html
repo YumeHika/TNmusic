@@ -1,0 +1,49 @@
+
+{% extends "frontendTemplates/layouts/frame-account.html" %}
+
+{% block title %} TNMusic | Account Privacy {% endblock %}
+
+{% block main-content %}
+
+
+
+<div class="col-9">
+    <div class="section-content">
+        <h3>Quyền riêng tư</h3>
+        
+        {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <p style="color: black;">Quyền riêng tư của bạn và bảo mật dữ liệu cá nhân của bạn sẽ luôn là ưu tiên cao nhất của chúng tôi.<br><br>Đó là lý do tại sao chúng tôi đã tạo Trung tâm quyền riêng tư để làm nổi bật một số phần quan trọng trong Chính sách quyền riêng tư của chúng tôi và cung cấp cho bạn thêm thông tin về các quyền và quyền kiểm soát mà bạn có liên quan đến dữ liệu cá nhân của mình.</p>
+
+        <h5 style="color: black;">Đăng xuất mọi nơi</h5>
+
+        <p style="color: black;">Đăng xuất ở bất cứ nơi nào bạn mở TNMusic, bao gồm web, thiết bị di động, máy tính để bàn hoặc bất kỳ thiết bị nào khác.</p>
+
+        <a href="{% url 'home-logout' %}" class="button-webPlay text-center" style="margin: 10px;">Đăng xuất ở mọi nơi</a>
+
+        <h5 style="color: black;">Làm cách nào để ngăn TNMusic xử lý dữ liệu của tôi?</h5>
+
+        <p style="color: black;">TNMusic cần xử lý một số dữ liệu cá nhân để cung cấp cho bạn dịch vụ TNMusic. Để xóa dữ liệu cá nhân đó, bạn cần phải đóng tài khoản của mình. <br> <br> Bạn có thể kiểm soát việc xử lý các danh mục dữ liệu nhất định từ trang tài khoản của mình hoặc trực tiếp từ ứng dụng TNMusic (xem “Làm cách nào để kiểm soát dữ liệu cá nhân được xử lý về tôi? ”ở trên để biết thêm thông tin).</p>
+
+        <h5 style="color: black;">Làm cách nào để chuyển dữ liệu âm nhạc của tôi sang một nhà cung cấp nhạc khác?</h5>
+
+        <p style="color: black;">Nếu bạn muốn chuyển dữ liệu TNMusic cá nhân của mình sang một dịch vụ khác, bạn có thể tải xuống bản sao của dữ liệu đó ở định dạng máy có thể đọc được từ phần Cài đặt quyền riêng tư trên trang tài khoản của bạn. Trang này cũng chứa các hướng dẫn để truy cập dữ liệu của bạn và tóm tắt các danh mục dữ liệu mà bạn có thể mong đợi nhận được.</p>
+
+
+        <h5 style="color: black;">Tôi có thể cập nhật thông tin cá nhân của mình không?</h5>
+
+        <p style="color: black;">Bạn có thể cập nhật chi tiết cá nhân của mình trong <a style="color: green;" href="{% url 'account-edit' %}">Edit Profile</a> của trang tài khoản của bạn.</p>
+        
+    </div>
+</div>
+
+
+{% endblock %}

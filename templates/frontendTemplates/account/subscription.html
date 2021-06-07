@@ -1,0 +1,40 @@
+
+{% extends "frontendTemplates/layouts/frame-account.html" %}
+
+{% block title %} TNMusic | Account Subscriptions {% endblock %}
+
+{% block main-content %}
+
+
+
+<div class="col-9">
+    <div class="section-content">
+        <h3>Đăng ký của bạn</h3>
+        
+        {% if messages %}
+        <div class="alert alert-danger" role="alert">
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <p style="color: black;">Nếu bạn có Premium, bạn có thể tải xuống nhạc và podcast để nghe ngoại tuyến trên tối đa 5 thiết bị cùng một lúc.<br><br>Nếu bạn muốn tải nhạc xuống thiết bị thứ 6, bạn có các tùy chọn sau:</p>
+                    
+        <ul style="padding: 20px;">
+            <li style="color: black; list-style:circle;">Khi bạn tải xuống thiết bị bổ sung, thiết bị có lượt tải xuống sớm nhất sẽ tự động bị xóa khỏi danh sách thiết bị ngoại tuyến trong tài khoản của bạn. Các bản nhạc trên thiết bị này sẽ không còn được tải xuống để nghe ngoại tuyến.</li><br>
+            <li style="color: black; list-style:circle;">Trước khi bạn tải xuống thiết bị bổ sung, hãy xóa thủ công một thiết bị khỏi danh sách thiết bị ngoại tuyến trong tài khoản của bạn. Các bản nhạc trên thiết bị này sẽ không còn được tải xuống để nghe ngoại tuyến.</li>
+        </ul>
+
+        <h5 style="color: black;">Đăng ký hiện tại là <strong style="color: orange;">TNMusic Free!!</strong></h5>
+        
+        <p style="color: black;">Kiểm tra các Gói trả phí của chúng tôi khi nó sẽ có sẵn cho người dùng!</p>
+
+                
+    </div>
+</div>
+
+
+{% endblock %}

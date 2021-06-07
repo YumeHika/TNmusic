@@ -1,0 +1,88 @@
+    	<nav id="sidebar">
+            <div class="sidebar-header">
+                <a href="{% url 'dashboard' %}"><h3>TNmusic Dashboard</h3></a>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Welcome Admin&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i></a></p>
+                <li>
+                    <a href="#genreSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-heartbeat" aria-hidden="true"></i> Thể loại</a>
+                    <ul class="collapse list-unstyled" id="genreSubmenu">
+                        <li>
+                            <a href="{% url 'genre-add' %}">Thêm thể loại</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'genre-index' %}">Xem thể loại</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#moodsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-headphones" aria-hidden="true"></i> Tâm trạng</a>
+                    <ul class="collapse list-unstyled" id="moodsSubmenu">
+                        <li>
+                            <a href="{% url 'mood-add' %}">Thêm tâm trạng</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'mood-index' %}">Danh sách tâm trạng</a>
+                        </li>
+                    </ul>
+				</li>
+
+				<li>
+                    <a href="#artistSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-user-ninja"></i> Nghệ sĩ</a>
+                    <ul class="collapse list-unstyled" id="artistSubmenu">
+                        <li>
+                            <a href="{% url 'artist-add' %}">Thêm nghệ sĩ</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'artist-index' %}">Danh sách nghệ sĩ</a>
+                        </li>
+                    </ul>
+				</li>
+				
+				<li>
+                    <a href="#songsSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-music"></i> Bài hát</a>
+                    <ul class="collapse list-unstyled" id="songsSubmenu">
+                        <li>
+                            <a href="{% url 'song-add' %}">Thêm bài hát</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'song-index' %}">Danh sách bài hát</a>
+                        </li>
+                    </ul>
+				</li>
+				
+				<li>
+                    <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-user"></i> Người dùng</a>
+                    <ul class="collapse list-unstyled" id="usersSubmenu">
+                        <li>
+                            <a href="{% url 'user-index' %}">Danh sách người dùng</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#playlistSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-list-ul"></i>&nbsp;&nbsp;Ưa thích</a>
+                    <ul class="collapse list-unstyled" id="playlistSubmenu">
+                        <li>
+                            <a href="{% url 'favorite-index' %}">Mục ưa thích</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="#homepageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-home"></i>&nbsp;&nbsp;Trang chủ</a>
+                    <ul class="collapse list-unstyled" id="homepageSubmenu">
+                        <li>
+                            <a href="{% url 'homepage-index' %}">Quản lý trang chủ</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" onclick="triggerModal();"><i class="fa fa-info-circle" aria-hidden="true"></i> Về chúng tôi</a>
+                </li>
+            </ul>
+
+        </nav>
