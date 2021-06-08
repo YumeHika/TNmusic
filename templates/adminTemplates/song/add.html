@@ -9,7 +9,7 @@
 				<div class="row">
 					<div class="col-12 text-center">
 						<div class="main-section">
-							<h2 class="content-heading">Add New Song</h2>
+							<h2 class="content-heading">Thêm bài hát mới</h2>
                         
                         {% if messages %}
                         <div class="alert alert-danger" role="alert">
@@ -28,15 +28,15 @@
                                 <div class="col-6">
                                     <div class="form-group text-left">
 
-                                        <label for="song-name">Song Name</label>
-                                        <input name="name" type="text" class="form-control" id="song-name" placeholder="Add a new song">
+                                        <label for="song-name">Tên bài hát</label>
+                                        <input name="name" type="text" class="form-control" id="song-name" placeholder="Tên bài hát">
                                       </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group text-left">
 
-                                        <label for="song-description">Song Description</label>
-                                        <input name="desc" type="text" class="form-control" id="song-description" placeholder="Add a new song description">
+                                        <label for="song-description">Mô tả</label>
+                                        <input name="desc" type="text" class="form-control" id="song-description" placeholder="Mô tả">
                                       </div>
                                 </div>
                                 
@@ -47,14 +47,14 @@
 						    	<div class="col-6">
 									<div class="form-group text-left">
 
-						                <label for="song-length">Song Length</label>
-						                <input name="length" type="text" class="form-control" id="song-length" placeholder="Add the song length">
+						                <label for="song-length">Độ dài</label>
+						                <input name="length" type="text" class="form-control" id="song-length" placeholder="Độ dài">
 						              </div>
 						    	</div>
 						    	<div class="col-6">
 
 						    		<div class="form-group text-left">
-									    <label for="artist-menu">Select Artist</label>
+									    <label for="artist-menu">Ca sĩ</label>
 									    <select name="artist" class="form-control" id="artist-menu">
 									    {% for row in artist %}
 									      <option value="{{ row.id }}">{{ row.artist_name }}</option>
@@ -69,7 +69,7 @@
 						    	<div class="col-6">
 
 						    		<div class="form-group text-left">
-									    <label for="genre-menu">Select Genre</label>
+									    <label for="genre-menu">Thể loại</label>
 									    <select name="genre" class="form-control" id="genre-menu">
 									    {% for row in genre %}
 									      <option value="{{ row.id }}">{{ row.genre_name }}</option>
@@ -81,7 +81,7 @@
 						    	<div class="col-6">
 									
 									<div class="form-group text-left">
-									    <label for="mood-menu">Select Mood</label>
+									    <label for="mood-menu">Tâm trạng</label>
 									    <select name="mood" class="form-control" id="mood-menu">
 									    {% for row in mood %}
 									      <option value="{{ row.id }}">{{ row.mood_name }}</option>
@@ -95,7 +95,7 @@
 						    <div class="row">
 						    	<div class="col-12 file_upload_song">
 
-						    		<h6>Upload Song</h6>
+						    		<h6>Upload bài hát</h6>
 
 						    		<div class="input-group mb-3">
 									  <div class="custom-file">
